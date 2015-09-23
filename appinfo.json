@@ -1,0 +1,31 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "firekesti",
+    "longName": "Terran Watchface",
+    "projectType": "native",
+    "resources": {
+        "media": [
+            {
+                "file": "fonts/terrancond.ttf",
+                "name": "TERRAN_24",
+                "type": "font"
+            },
+            {
+                "file": "fonts/terrancond.ttf",
+                "name": "TERRAN_48",
+                "type": "font"
+            }
+        ]
+    },
+    "sdkVersion": "2",
+    "shortName": "Terran",
+    "uuid": "00294447-bbd4-4020-9a0e-5cd9d58412a1",
+    "versionCode": 1,
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": true
+    }
+}
