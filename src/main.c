@@ -10,8 +10,7 @@ static GFont s_date_font;
 static GColor background_color = GColorBlack;
 static GColor text_color = GColorWhite;
 // Vibe pattern: ON in ms then OFF etc
-static const uint32_t const disconnect_segments[] = { 100, 100, 400, 100, 100 };
-static const uint32_t const connect_segments[] = { 200, 100, 200, 100, 50 };
+static uint32_t const disconnect_segments[] = { 100, 100, 400, 100, 100 };
 
 static void update_time() {
   // Get a tm structure
@@ -67,11 +66,8 @@ static void handle_bluetooth_init(bool connected) {
 static void handle_bluetooth(bool connected) {
   layer_set_hidden((Layer *)s_bluetooth_layer, connected);
   if (connected) {
-    VibePattern pattern = {
-      .durations = connect_segments,
-      .num_segments = ARRAY_LENGTH(connect_segments),
-    };
-    vibes_enqueue_custom_pattern(pattern);
+      // keep it simple, custom pattern was behaving oddly only on connect
+    vibes_double_pulse();
   } else {
     VibePattern pattern = {
       .durations = disconnect_segments,
