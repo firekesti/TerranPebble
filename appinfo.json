@@ -9,6 +9,12 @@
     "resources": {
         "media": [
             {
+                "file": "images/ter_28_28.png",
+                "menuIcon": true,
+                "name": "ter_28_28",
+                "type": "png"
+            },
+            {
                 "file": "fonts/terrancond.ttf",
                 "name": "TERRAN_24",
                 "type": "font"
